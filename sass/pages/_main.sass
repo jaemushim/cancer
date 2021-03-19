@@ -1,0 +1,336 @@
+// 메인 비쥬얼 ( 섹션 1 )
+.main
+    .visual
+        background-image: url(../images/main/header_bg.png)
+        background-repeat: no-repeat
+        background-position: 0 0
+        background-size: cover
+        @include for_breakpoint(pc)
+            height: 520px
+
+        .row
+            @include for_breakpoint(pc tablet)
+                display: flex
+                justify-content: space-between
+            @include for_breakpoint(mobile tablet)
+                padding: 30px 10px 50px 0
+
+            .col-1
+                @include for_breakpoint(pc)
+                    padding-top: 120px
+                    width: 45%
+                @include for_breakpoint(mobile)
+                    width: 100%
+                @include for_breakpoint(tablet)
+                    padding-top: 70px
+
+                .title
+                    font-size: 50px
+                    line-height: 1
+                    letter-spacing: -4px
+                    font-weight: 400
+                    @include for_breakpoint(mobile tablet)
+                        font-size: 30px
+                    @include for_breakpoint(tablet)
+                        font-size: 38px
+                .sub-title
+                    margin-top: 20px
+                    color: #444
+                    font-size: 16px
+                    line-height: 1.4
+                    max-width: 410px
+                    @include for_breakpoint(mobile tablet)
+                        padding-right: 50px
+                        font-size: 13px
+                    @include for_breakpoint(tablet)
+                        font-size: 16px
+            .col-2
+                padding-top: 70px
+                width: 45%
+                position: relative
+                @include for_breakpoint(mobile tablet)
+                    width: 100%
+                    padding-top: 20px
+                    text-align: right
+                @include for_breakpoint(tablet)
+                    padding-top: 0
+
+                img
+                    box-shadow: 0 0 5px 0 rgba(0,0,0,0.3)
+                    position: relative
+                    z-index: 2
+                    display: inline-block
+                    width: 100%
+                    height: 100%
+                    @include for_breakpoint(mobile)
+                        width: 90%
+                    @include for_breakpoint(tablet pc)
+                        width: 100%
+                &:after
+                    content: ''
+                    display: block
+                    position: absolute
+                    bottom: -35px
+                    left: -50px
+                    width: 70%
+                    height: 65%
+                    background-color: rgba(8, 88, 186, 0.45)
+                    z-index: 1
+                    @include for_breakpoint(mobile tablet)
+                        left: 0
+                        bottom: -10%
+                        width: 87%
+                        height: 85%
+                    @include for_breakpoint(tablet)
+                        left: -30px
+                        bottom: -7%
+
+    // 섹션 2
+    .section-2
+        @include for_breakpoint(pc)
+            background-color: #d8dee7
+        .container
+            padding: 0 !important
+        a
+            display: flex
+            justify-content: center
+            align-items: center
+            color: #333
+            font-size: 22px
+            letter-spacing: -1px
+            position: relative
+            z-index: 22
+            @include for_breakpoint(pc)
+                padding: 1.5rem 1.5rem
+                padding-left: 46px
+                padding-right: 0
+            @include for_breakpoint(mobile tablet)
+                flex-direction: column
+
+        ul.row
+            padding-top: 0
+            background-color: #fff
+            height: 140px
+            overflow-x: hidden
+
+            @include for_breakpoint(pc)
+                transform: translateY(-65px)
+                box-shadow: 0 0 5px 0 rgba(0,0,0,0.1)
+                padding-top: 35px
+
+            @media only screen and (max-width: 460px)
+                padding-right: 50px
+                height: 180px
+            @include for_breakpoint(tablet)
+                height: 170px
+                padding-top: 15px
+            .item
+                position: relative
+                display: inline-block
+                margin: 0 20px
+                &:after
+                    content: ""
+                    position: absolute
+                    top: 0
+                    left: 0
+                    bottom: 0
+                    right: 0
+                    margin: auto
+                    width: 40px
+                    height: 40px
+                    display: inline-block
+                    background: url(../images/main/quick_icon_1_m.png) no-repeat
+                    background-size: 40px 40px
+                &.n2:after
+                    background: url(../images/main/quick_icon_2_m.png) no-repeat
+                &.n3:after
+                    background: url(../images/main/quick_icon_3_m.png) no-repeat
+                &.n4:after
+                    background: url(../images/main/quick_icon_4_m.png) no-repeat
+                @include for_breakpoint(mobile tablet)
+                    height: 100px
+                @include for_breakpoint(tablet pc)
+                    &:after
+                        background: url(../images/main/quick_icon_1.png) no-repeat
+                        background-size: 100% 100%
+                        width: 70px
+                        height: 70px
+                        margin: unset
+                    &.n2:after
+                        background: url(../images/main/quick_icon_2.png) no-repeat
+                    &.n3:after
+                        background: url(../images/main/quick_icon_3.png) no-repeat
+                    &.n4:after
+                        background: url(../images/main/quick_icon_4.png) no-repeat
+                @include for_breakpoint(tablet)
+                    &:after
+                        margin: auto
+                &:before
+                    @include for_breakpoint(pc)
+                        content: ''
+                        display: block
+                        position: absolute
+                        top: 50%
+                        right: 0
+                        width: 1px
+                        height: 50px
+                        background-color: #ccc
+                        transform: translateY(-50%)
+
+                &:last-child:before
+                    display: none
+
+                span
+                    display: block
+                    margin-left: 0.5rem
+                    line-height: 1
+                    @include for_breakpoint(mobile tablet)
+                        font-size: 16px
+                        margin-top: 12px
+                        padding-top: 70px
+                        margin-left: 0
+                        text-align: center
+                    @include for_breakpoint(tablet)
+                        padding-top: 85px
+                &:nth-child(1):hover .point
+                    color: #ffc20e
+
+                &:nth-child(2):hover .point
+                    color: #1ab26b
+
+                &:nth-child(3):hover .point
+                    color: #f26065
+
+                &:nth-child(4):hover .point
+                    color: #0072bc
+
+    // 섹션 3
+    .section-3
+        background-color: #d8dee7
+        .container
+            @include for_breakpoint(mobile tablet)
+                padding: 20px
+            .row
+                @include for_breakpoint(pc tablet)
+                    display: flex
+                    justify-content: space-between
+                @include for_breakpoint(pc)
+                    transform: translateY(-25px)
+                > *
+                    width: 48%
+                @include for_breakpoint(mobile)
+                    > *
+                        width: 100%
+
+            .box
+                background-color: #fff
+                padding: 35px
+                position: relative
+                margin-bottom: 20px
+                @include for_breakpoint(mobile tablet)
+
+                > h2
+                    font-size: 20px
+                    font-weight: 500
+
+                &.on
+                    color: #333
+                    font-size: 20px
+                    font-weight: 500
+
+                ul
+                    max-height: 174px
+                    overflow: hidden
+                    overflow-y: scroll
+                    margin-top: 20px
+                    margin-bottom: 6px
+                    &.active
+                        max-height: none
+                    li
+                        position: relative
+                        line-height: 34px
+                        padding-left: 13px
+                        margin: 3px 0
+                        overflow: hidden
+                        text-overflow: ellipsis
+                        white-space: nowrap
+
+                        &:hover
+                            background-color: #f8f8f8
+
+                        &:before
+                            display: block
+                            position: absolute
+                            left: 0
+                            top: 18px
+                            width: 4px
+                            height: 4px
+                            margin-top: -2px
+                            background-color: #0858ba
+                            content: ''
+
+                        a
+                            max-width: 343px
+                            white-space: nowrap
+                            text-overflow: ellipsis
+                            color: #666
+                            letter-spacing: -1.6px
+                            line-height: 1
+
+                        .date
+                            color: #b5b5b5
+                            display: block
+                            font-size: 13px
+                            line-height: 1
+                            margin-top: -3px
+
+            .col-2
+                .else
+                    position: absolute
+                    top: 35px
+                    left: 9.1rem
+                    color: #b7b7b7
+                    font-weight: 400
+                    display: flex
+                    @include for_breakpoint(mobile tablet)
+                        top: 20px
+                        left: 8rem
+                    &>*:last-child
+                        @include for_breakpoint(mobile tablet)
+                            display: none
+
+                    > h2
+                        margin-right: 20px
+                        font-size: 20px
+
+                        &:before
+                            content: '|'
+                            display: inline-block
+                            font-size: 13px
+                            margin-bottom: 5px
+                            position: relative
+                            bottom: 3px
+                            color: #ddd
+                            left: -7px
+
+                        a:hover
+                            color: #333
+                            font-weight: 500
+
+    // 섹션 4
+    .section-4
+        .wrap
+            padding: 2rem 0
+            text-align: center
+
+            li
+                display: inline-block
+                padding: 25px
+
+            img
+                display: block
+
+            .title
+                display: block
+                margin-top: 0.5rem
+                font-weight: 500

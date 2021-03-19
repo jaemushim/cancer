@@ -1,0 +1,61 @@
+footer
+    font-size: 12px
+    background-color: #444
+    color: #eee
+    letter-spacing: -1px
+
+    .row
+        display: flex
+        align-items: center
+        padding: 30px 0 50px
+        @include for_breakpoint(mobile )
+            flex-direction: column
+            text-align: left
+    .fnb-wrap
+        border-bottom: 1px solid #a4a4a4
+
+    .fnb
+        font-size: 13px
+        color: #c8c8c8
+        padding: 20px 0
+
+    .fnb
+        li
+            display: inline-block
+            position: relative
+            padding: 0 10px
+            padding-left: -1px
+            &:first-child
+                padding-left: 0
+            &:after
+                content: "|"
+                position: absolute
+                right: 0
+
+            &:last-child:after
+                content: ''
+    .col-1
+        @include for_breakpoint(mobile)
+            width: 100%
+            margin-bottom: 12px
+    .col-2
+        @include for_breakpoint(pc tablet)
+            margin-left: 80px
+        @include for_breakpoint(mobile tablet)
+            width: 100%
+    ul
+        li
+            font-size: 13px
+            letter-spacing: 0
+            display: inline-block
+            @include for_breakpoint(mobile)
+                display: block
+
+    .copy
+        color: #d7d7d7
+
+    .white
+        color: #fff
+
+    a:hover
+        text-decoration: underline

@@ -1,0 +1,68 @@
+.edu-course_edu-schedule
+    .select-wrap
+        select
+            border: none
+            padding: 5px 10px
+            border-bottom: 1px solid #111
+            height: 40px
+            margin-right: 15px
+            color: #333
+            font-size: 16px
+            font-weight: bold
+            text-align: center
+            margin: 26px 0
+    .edu-term-2
+        @include for_breakpoint(mobile)
+            display: none
+    .max-num,.edu-term,.generation
+        @media only screen and (max-width:610px)
+            display: none
+    .bbs-2
+        @include for_breakpoint(pc)
+            width: 1340px
+    .bbs-2
+        colgroup
+            col:nth-child(1)
+                width: 12%
+            col:nth-child(2)
+                width: 36%
+.edu-course_course-list
+    .edu-term
+        @include for_breakpoint(mobile)
+            display: none
+    .edu-taget
+        @media only screen and (max-width:500px)
+            display: none
+
+.edu-course_course-regist
+    .notice
+        text-align: center
+        font-size: 14px
+        color: #666
+        line-height: 2
+
+    table
+        margin-top: 25px
+
+        input[type='radio']
+            width: 20px
+            height: 20px
+    .edu-term,.count,.edu-taget
+        @include for_breakpoint(mobile tablet)
+            display: none
+    .max-num
+        @include for_breakpoint(mobile tablet)
+            display: none
+    .bbs-2
+        colgroup
+            col:nth-child(1)
+                @include for_breakpoint(pc)
+                    width: 13%
+            col:nth-child(2)
+                @include for_breakpoint(pc)
+                    width: 42%
+
+.edu-course_course-list
+    .title
+        @include for_breakpoint(pc)
+            padding: 10px 30px

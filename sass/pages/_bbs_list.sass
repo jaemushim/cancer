@@ -1,0 +1,65 @@
+.bbs_notice
+    table
+        .title
+            text-align: left
+
+.bbs_CS
+    table
+        .title
+            text-align: left
+
+.bbs_FAQ
+    table
+        tr
+            cursor: pointer
+
+            &.active
+                display: table-row !important
+                background-color: #f6f6f6
+
+        td
+            text-align: left
+            padding: 0 !important
+            position: relative
+            padding-left: 30px !important
+
+            @include for_breakpoint(mobile)
+                padding-right: 40px !important
+        .text-wrap
+            display: -webkit-box
+
+            white-space: normal
+            overflow: hidden
+            padding: 20px 0
+
+            word-wrap: break-word
+            -webkit-line-clamp: 2
+            -webkit-box-orient: vertical
+            @include for_breakpoint(mobile)
+                padding: 10px 0
+                height: 36px
+        .tab-link
+            td
+                &:after
+                    @include for_breakpoint(mobile)
+                        content: ''
+                        position: absolute
+                        background: url(../images/common/down_arrow_2.png) no-repeat
+                        display: inline-block
+                        width: 15px
+                        height: 15px
+                        top: 40%
+                        right: 15px
+            &.active
+                td
+                    &:after
+                        transform: rotate(180deg)
+
+        th,td
+            @include for_breakpoint(mobile)
+                padding: 5px
+
+    colgroup
+        col:first-child
+            @include for_breakpoint(mobile)
+                width: 25% !important

@@ -1,0 +1,133 @@
+// =더보기 버튼 (메인 페이지)
+.more-btn
+    display: block
+    position: absolute
+    top: 35px
+    right: 35px
+    color: #333
+    @include for_breakpoint(mobile tablet)
+        top: 20px
+        right: 20px
+    img
+        border: 1px solid #ddd
+        padding: 5px
+        width: 14px
+        height: 14px
+
+// 버튼 Wrap
+.button-wrap
+    text-align: center
+    margin-top: 36px
+
+// 펼치기
+button.open
+    display: none
+    margin-top: 15px
+    @include for_breakpoint(mobile tablet)
+        height: 45px
+        font-size: 14px
+        color: #333
+        border: 1px solid #ddd
+        display: inline-block
+        width: 100%
+.max-height
+    @include for_breakpoint(mobile  tablet)
+        max-height: 554px
+        overflow: hidden
+    &.active
+        @include for_breakpoint(mobile  tablet)
+        max-height: none !important
+
+// 버튼 80px 35px primary
+.btn-80-35-pri
+    display: inline-block
+    vertical-align: middle
+    width: 80px
+    height: 35px
+    line-height: 34px
+    text-align: center
+    background-color: #234588
+    color: #fff
+    font-size: 14px
+    transition: 0.1s all ease
+    @include for_breakpoint(mobile)
+        width: 40px
+        height: 50px
+
+    &:hover
+        background-color: #1a3975
+
+// 버튼 80px 35px primary #333
+.btn-80-35-333
+    @extend .btn-80-35-pri
+    background-color: #333
+    @include for_breakpoint(mobile)
+        width: 80px
+        max-width: 75px
+        height: 35px
+    &:hover
+        background-color: #333
+
+// 버튼 80px 35px #fff border:#333
+.btn-80-35-fff-bd333
+    @extend .btn-80-35-pri
+    color: #333
+    background-color: #fff
+    border: 1px solid #333
+    &:hover
+        background-color: #fff
+// 버튼 150px 45px #fff border:#333
+.btn-150-45-fff-bd333
+    @extend .btn-80-35-fff-bd333
+    width: 150px
+    height: 45px
+
+// 버튼 150px 45px #fbfbfb border:#ddd
+.btn-150-45-fbfbfb-bdddd
+    display: inline-block
+    vertical-align: middle
+    width: 150px
+    height: 45px
+    line-height: 43px
+    text-align: center
+    background-color: #fbfbfb
+    color: #666
+    font-size: 15px
+    border: 1px solid #ddd
+    transition: 0.1s all ease
+
+// 버튼 150px 45px #454545
+.btn-150-45-454545
+    display: inline-block
+    vertical-align: middle
+    font-weight: 500
+    text-align: center
+    line-height: 43px
+    width: 150px
+    height: 45px
+    background-color: #454545
+    color: #fff
+    font-size: 15px
+    transition: all 0.1s ease
+    &:hover
+        background-color: #333
+
+// 버튼 150px 45px primary
+.btn-150-45-pri
+    @extend .btn-150-45-454545
+    background-color: #234588
+    &:hover
+        background-color: #1a3975
+
+// 버튼 55px 35px primary
+.btn-55-35-pri
+    @extend .btn-80-35-pri
+    width: 55px
+    height: 35px
+    line-height: 34px
+
+// 버튼 55px 30px fff border #333
+.btn-55-30-fff-bd333
+    @extend .btn-80-35-fff-bd333
+    width: 55px
+    height: 35px

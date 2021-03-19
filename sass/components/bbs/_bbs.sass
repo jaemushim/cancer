@@ -1,0 +1,223 @@
+table.bbs
+    text-align: center
+    border-top: 2px solid #333
+    letter-spacing: -0.7px
+    border-collapse: collapse
+    width: 100%
+    margin-top: 30px
+    text-align: center
+    color: #666
+    font-size: 14px
+    thead
+        tr
+            background-color: #f6f6f6
+            border-bottom: 1px solid#ccc
+            th
+                font-weight: 700
+                color: #333
+    tr
+        border-bottom: 1px solid #ddd
+    th,td
+        padding: 11px 10px
+        line-height: 1.5
+        height: 58px
+        font-size: 14px
+        font-weight: 400
+    & td:first-child, &th:first-child
+        border-left: none
+    & td:last-child, & th:last-child
+        border-right: none
+    a:not(.btn):hover
+        text-decoration: underline
+    .title,.author
+        color: #333
+    .title
+        text-align: left
+    .fixed
+        background-color: #f2f8fd
+    .date,.hit,.order
+        font-size: 13px
+    //게시판 반응형 ( 회원가입 스텝 3 )
+table.bbs.mobile-take-block, table.bbs-2.mobile-take-block
+    tr
+        @include for_breakpoint(mobile)
+            position: relative
+    &,tbody,tr,.title
+        @include for_breakpoint(mobile)
+            display: block
+
+    .title
+        @include for_breakpoint(mobile)
+            display: block
+            text-align: left
+            font-size: 18px
+    td
+        @include for_breakpoint(mobile)
+            height: 30px
+            padding: 5px 15px
+    th
+        @include for_breakpoint(mobile)
+            height: 30px
+            padding: 5px 15px
+            display: block
+    .order
+        @include for_breakpoint(mobile)
+            font-size: 16px
+            padding: 5px 15px
+            padding-bottom: 0
+    thead
+        @include for_breakpoint(mobile)
+            display: none
+    td.writer,td.date
+        position: relative
+        &:after
+            position: absolute
+            content: "|"
+            right: 0
+            color: #ddd
+    .reply
+        background-color: #f2f8fd
+
+    // 게시판 반응형 2 ( 정보수정 )
+table.bbs.mobile-take-block-2,table.bbs-2.mobile-take-block-2
+    @include for_breakpoint(mobile)
+        margin-top: 6px
+    tr
+        @include for_breakpoint(mobile)
+            position: relative
+    &,tbody,tr,.title
+        @include for_breakpoint(mobile)
+            display: block
+    .id
+        th
+            @include for_breakpoint(mobile)
+                height: 20px
+        @include for_breakpoint(mobile)
+            height: 70px
+        td
+            font-size: 14px
+
+    .password
+        th
+            margin: 8px 0 3px !important
+
+    .password-curr
+        @include for_breakpoint(mobile)
+            height: 90px
+
+    .name,.birth,.gender,.phone
+        @include for_breakpoint(mobile)
+            height: 73px !important
+
+    .gender
+        th
+            @include for_breakpoint(mobile)
+                height: 30px
+        td
+            @include for_breakpoint(mobile)
+                display: block
+
+    .title
+        @include for_breakpoint(mobile)
+            display: block
+            text-align: left
+            font-size: 18px
+    .email
+        input[type="text"]
+            max-width: 145.6px
+        span
+            margin: 5px 6px
+    .job
+        @include for_breakpoint(mobile)
+            display: block
+            height: 250px
+        button
+            @include for_breakpoint(mobile)
+                margin-left: 7.5px !important
+    .job-num
+        @include for_breakpoint(mobile)
+            display: block
+            margin: 10px 0
+    .belong
+        @include for_breakpoint(mobile)
+            height: 194px
+        button
+            @include for_breakpoint(mobile)
+                margin-left: 7.5px !important
+    .career
+        @include for_breakpoint(mobile)
+            height: 92px
+        .select-career
+            @include for_breakpoint(mobile)
+                width: 166px !important
+
+    .recent
+        @include for_breakpoint(mobile)
+            height: 76px
+    .sign-out
+        @include for_breakpoint(mobile)
+            height: 184px
+        button
+            @include for_breakpoint(mobile)
+                background-color: #fff
+                color: #333
+                font-size: 13px
+                border: 1px solid #ddd
+    td
+        padding: 10px 0 !important
+        @include for_breakpoint(mobile)
+            height: 30px
+            padding: 0px 15px
+    th
+
+        @include for_breakpoint(mobile)
+            margin: 3px 0
+            height: 30px
+            padding: 5px 15px
+            display: block
+    .order
+        @include for_breakpoint(mobile)
+            font-size: 16px
+            padding: 5px 15px
+            padding-bottom: 0
+    thead
+        @include for_breakpoint(mobile)
+            display: none
+    td.writer,td.date
+        position: relative
+        &:after
+            position: absolute
+            content: "|"
+            right: 0
+            color: #ddd
+
+table.bbs-2
+    @extend table.bbs
+    th,td
+        border: 1px solid #ddd
+
+table.bbs-2-h40
+    @extend table.bbs
+    th,td
+        border: 1px solid #ddd
+        height: 40px
+    th
+        background-color: #f6f6f6
+
+// 답변 화살표
+.reply
+    .title
+        &:before
+            content: ""
+            position: relative
+            width: 12px
+            height: 8px
+            display: inline-block
+            background: url(../images/common/reply_arrow.png) no-repeat
+            margin-right: 5px
+
+// 게시판 반응형 컬럼 삭제
+.bbs,.bbs-2
+    .generation,.state,.author,.hit,.date
+        @media only screen and (max-width:560px)
+            display: none

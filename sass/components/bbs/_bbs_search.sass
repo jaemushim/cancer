@@ -1,0 +1,49 @@
+section
+    >.container
+        position: relative
+
+.bbs-search
+    position: absolute
+    top: 0
+    right: 0
+    @include for_breakpoint(mobile tablet)
+        position: relative
+    select
+        width: 140px
+        height: 40px
+        vertical-align: middle
+        background: url(../images/common/down_arrow_2.png) right 15px center no-repeat
+        border: 1px solid #ddd
+        color: #333
+        font-weight: 500
+        padding-left: 10px
+        -webkit-appearance: none
+        @include for_breakpoint(mobile )
+            width: 100%
+            margin-bottom: 5px
+    .search
+        width: 220px
+        height: 40px
+        border: 1px solid #ddd
+        padding-left: 10px
+
+    .search::placeholder
+        color: #919191
+        font-weight: 400
+
+    input[type="text"]
+        @include for_breakpoint(mobile )
+            width: 80%
+    button[type='submit']
+        width: 60px
+        height: 40px
+        font-size: 14px
+        color: #fff
+        background-color: #333
+        transition: all 0.1s ease-in
+        @include for_breakpoint(mobile)
+            display: inline-block
+            width: 19%
+
+    button[type='submit']:hover
+        background-color: #000
