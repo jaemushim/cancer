@@ -4768,14 +4768,14 @@ footer a:hover {
   top: 8px;
 }
 
-.board-read section .comment-wrap #commentAuthor {
+.board-read section .comment-wrap .commentAuthor {
   color: #234588;
   font-weight: 500;
   display: inline-block;
   margin-right: 7px;
 }
 
-.board-read section .comment-wrap #commentDate {
+.board-read section .comment-wrap .commentDate {
   display: inline-block;
   margin-left: 3px;
   color: #666;
@@ -6515,5 +6515,13 @@ footer a:hover {
 
 .w-1\/10 {
   width: 10%;
+}
+
+.w-4\/5 {
+  width: 80%;
+}
+
+.w-1\/5 {
+  width: 20%;
 }
 /*# sourceMappingURL=main.css.map */
