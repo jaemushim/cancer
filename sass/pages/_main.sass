@@ -81,6 +81,7 @@
                         bottom: -10%
                         width: 87%
                         height: 85%
+                        font-size: 22px
                     @include for_breakpoint(tablet)
                         left: -30px
                         bottom: -7%
@@ -96,7 +97,7 @@
             justify-content: center
             align-items: center
             color: #333
-            font-size: 22px
+            font-size: 18px !important
             letter-spacing: -1px
             position: relative
             z-index: 22
@@ -112,7 +113,10 @@
             background-color: #fff
             height: 140px
             overflow-x: hidden
-
+            width: 100%
+            padding: 0 14px
+            .slick-track,.slick-list
+                width: 100%
             @include for_breakpoint(pc)
                 transform: translateY(-65px)
                 box-shadow: 0 0 5px 0 rgba(0,0,0,0.1)
@@ -127,7 +131,7 @@
             .item
                 position: relative
                 display: inline-block
-                margin: 0 20px
+                margin: 0 10px
                 &:after
                     content: ""
                     position: absolute
@@ -147,6 +151,13 @@
                     background: url(../images/main/quick_icon_3_m.png) no-repeat
                 &.n4:after
                     background: url(../images/main/quick_icon_4_m.png) no-repeat
+                &.n5:after
+                    background: url(../images/main/quick_icon_5_m.png) no-repeat
+                @include for_breakpoint(pc)
+                    &.n4
+                        width: 220px !important
+                    &.n5
+                        width: 170px !important
                 @include for_breakpoint(mobile tablet)
                     height: 100px
                 @include for_breakpoint(tablet pc)
@@ -162,6 +173,8 @@
                         background: url(../images/main/quick_icon_3.png) no-repeat
                     &.n4:after
                         background: url(../images/main/quick_icon_4.png) no-repeat
+                    &.n5:after
+                        background: url(../images/main/quick_icon_5.png) no-repeat
                 @include for_breakpoint(tablet)
                     &:after
                         margin: auto
