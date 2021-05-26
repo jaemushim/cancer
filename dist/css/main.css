@@ -2963,13 +2963,13 @@ section > .container {
 }
 
 .sub .tab-nav .btn.active, .sub .tab-nav--2 .btn.active, .sub .tab-nav--5 .btn.active, .sub .tab-nav--6 .btn.active {
-  border-bottom: 3px solid #0072bc;
+  border-bottom: 5px solid #0072bc;
   font-weight: 500;
   color: #333;
 }
 
 .sub .tab-nav .btn:hover, .sub .tab-nav--2 .btn:hover, .sub .tab-nav--5 .btn:hover, .sub .tab-nav--6 .btn:hover {
-  border-bottom: 3px solid #0072bc;
+  border-bottom: 5px solid #0072bc;
   text-decoration: none;
 }
 
@@ -3709,7 +3709,7 @@ section > .container {
   text-align: left;
   font-size: 13px;
   border: 1px solid #ccc;
-  padding: 5px 12px;
+  padding: 10px 12px;
 }
 
 .subpage-curr-wrap > .container .curr .dept-1 .dept-2 a {
@@ -3717,12 +3717,24 @@ section > .container {
   width: 100%;
   padding: 7px;
   color: #666;
-  border-bottom: 1px solid #ccc;
+  border-bottom: 1px solid #eee;
+  position: relative;
 }
 
 .subpage-curr-wrap > .container .curr .dept-1 .dept-2 a:hover {
   color: #234588;
   font-weight: 500;
+}
+
+.subpage-curr-wrap > .container .curr .dept-1 .dept-2 a:hover:before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  display: inline-block;
+  width: 100%;
+  left: 0;
+  height: 3px;
+  background-color: #234588;
 }
 
 .subpage-curr-wrap > .container .curr .dept-1 .dept-2 li:last-child a {
@@ -4174,6 +4186,7 @@ footer a:hover {
   display: block;
   margin-left: 0.5rem;
   line-height: 1;
+  padding-bottom: 8px;
 }
 
 @media only screen and (max-width: 768px), only screen and (min-width: 768px) and (max-width: 1100px) {
@@ -4192,6 +4205,26 @@ footer a:hover {
   }
 }
 
+.main .section-2 ul.row .item:nth-child(1):hover span {
+  border-bottom: 4px solid #ffc20e;
+}
+
+.main .section-2 ul.row .item:nth-child(2):hover span {
+  border-bottom: 4px solid #1ab26b;
+}
+
+.main .section-2 ul.row .item:nth-child(3):hover span {
+  border-bottom: 4px solid #f26065;
+}
+
+.main .section-2 ul.row .item:nth-child(4):hover span {
+  border-bottom: 4px solid #0072bc;
+}
+
+.main .section-2 ul.row .item:nth-child(5):hover span {
+  border-bottom: 4px solid #e2761e;
+}
+
 .main .section-2 ul.row .item:nth-child(1):hover .point {
   color: #ffc20e;
 }
@@ -4206,6 +4239,10 @@ footer a:hover {
 
 .main .section-2 ul.row .item:nth-child(4):hover .point {
   color: #0072bc;
+}
+
+.main .section-2 ul.row .item:nth-child(5):hover .point {
+  color: #e2761e;
 }
 
 .main .section-3 {
@@ -5479,7 +5516,7 @@ footer a:hover {
 }
 
 @media only screen and (min-width: 1100px) {
-  .edu-course_course-list .title {
+  .edu-course_course-list main .title {
     padding: 10px 30px;
   }
 }
