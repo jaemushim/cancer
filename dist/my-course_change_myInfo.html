@@ -256,7 +256,7 @@
                     <div class="wrap"></div>
                     <div class="search-open">
                         <div class="search-box">
-                            <form action="#" name="search_form">
+                            <form action="$" name="search_form">
                                 <fieldset>
                                     <legend>통합검색</legend>
                                     <div class="search-input-wrap">
@@ -325,13 +325,13 @@
                     <div class="container">
                         <h2>정보수정</h2>
                         <div class="wrap">
-                            <form action="">
+                            <form action="$">
                                 <table class="bbs-2 mobile-take-block-2">
                                     <caption>
                                         회원가입에 필요한 회원정보를 입력하는 폼입니다.
                                     </caption>
                                     <colgroup>
-                                        <col width="15%" />
+                                        <col class="w-3/20" />
                                         <col />
                                     </colgroup>
                                     <tbody>
@@ -341,7 +341,7 @@
                                         </tr>
                                         <tr class="password">
                                             <th scope="row">
-                                                <label for="password">새 비밀번호</label>
+                                                <label for="pwd1">새 비밀번호</label>
                                             </th>
                                             <td>
                                                 <input type="password" name="password"  id="pwd1"
@@ -354,7 +354,7 @@
                                         </tr>
                                         <tr class="password-check">
                                             <th scope="row">
-                                                <label for="passwordCheck">새 비밀번호 확인</label>
+                                                <label for="pwd2">새 비밀번호 확인</label>
                                             </th>
                                             <td>
                                                 <input type="password" name="passwordCheck" 
@@ -365,23 +365,23 @@
                                         </tr>
                                         <tr class="password-curr">
                                             <th scope="row">
-                                                <label for="passwordCheck"
+                                                <label for="pwd3"
                                                     >(필수) 현 비밀번호</label
                                                 >
                                             </th>
                                             <td>
-                                                <input type="password" name="passwordCheck" />
+                                                <input type="password" name="passwordCheck" id="pwd3" />
                                             </td>
                                         </tr>
                                         <tr class="name">
                                             <th scope="row">
-                                                <label for="name">이름</label>
+                                                이름
                                             </th>
                                             <td>남정규</td>
                                         </tr>
                                         <tr class="birth">
                                             <th scope="row">
-                                                <label for="year">생년월일</label>
+                                                생년월일
                                             </th>
                                             <td>19850713</td>
                                         </tr>
@@ -391,7 +391,7 @@
                                         </tr>
                                         <tr class="phone">
                                             <th scope="row">
-                                                <label for="phone">연락처</label>
+                                                연락처
                                             </th>
                                             <td>01048787696</td>
                                         </tr>
@@ -400,7 +400,7 @@
                                                 <label for="email">이메일</label>
                                             </th>
                                             <td>
-                                                <input type="text" name="email" class="mb-5 md:mb-0" /> <span> @ </span>
+                                                <input type="text" id="email" name="email" class="mb-5 md:mb-0" /> <span> @ </span>
                                                 <input type="text" name="email" class="mb-5 md:mb-0" />
                                                 <span class="select-email">
                                                     <select name="emailDomain">
@@ -419,7 +419,7 @@
                                             </th>
                                             <td>
                                                 <span class="select-job">
-                                                    <select name="job">
+                                                    <select name="job" id="직종">
                                                         <option value="1.영상의학과 의사">
                                                             1.영상의학과 의사
                                                         </option>
@@ -443,9 +443,12 @@
                                                         <option value="9.기타">9.기타</option>
                                                     </select>
                                                 </span>
-                                                <span class="job-num"> 면허번호 </span>
+                                                <span class="job-num"> 
+                                                    <label for="license-num">면허번호</label>
+                                                </span>
                                                 <input
                                                     type="text"
+                                                    id="license-num"
                                                     name="license"
                                                     class="license-input"
                                                     placeholder="면허번호 입력"
@@ -459,6 +462,7 @@
                                                         name="license"
                                                         class="license-input md:mt-10"
                                                          placeholder="전문의 면허번호 입력"
+                                                        title="전문의 면허번호 입력"
                                                     />
                                                     <button type="button" class="btn-80-35-333 m-0 md:mt-10">
                                                         번호확인
@@ -467,11 +471,12 @@
                                         </tr>
                                         <tr class="belong">
                                             <th scope="row">
-                                                <label for="job">소속기관</label>
+                                                <label for="belong">소속기관</label>
                                             </th>
                                             <td>
                                                 <input
                                                     type="text"
+                                                    id="belong"
                                                     name="belong"
                                                     class="belong-input mb-5"
                                                     value="국립암센터병원 (31100741)"
@@ -484,8 +489,8 @@
                                                     >) 또는 전화(031-920-2188)로 '검진기관명,
                                                     요양기관번호, 주소, 전화번호'를 알려주시면
                                                     등록해드리겠습니다.
-                                                    <p class="red"> * 소속기관 미등록 시,
-                                                    검진기관평가에서 누락될수도 있습니다.]</p>
+                                                    <div class="red"> * 소속기관 미등록 시,
+                                                    검진기관평가에서 누락될수도 있습니다.]</div>
                                                 </p>
                                             </td>
                                         </tr>
@@ -495,7 +500,7 @@
                                                 <label for="career">경력</label>
                                             </th>
                                             <td>
-                                                <input type="text" name="career" placeholder="숫자만 입력해 주세요" /> <span class="none md:inline-block"> 년 </span>
+                                                <input type="text" id="career" name="career" placeholder="숫자만 입력해 주세요" /> <span class="none md:inline-block"> 년 </span>
                                                 <span class="select-career">
                                                     <select name="career">
                                                         <option value="1개월">1개월</option>
@@ -519,7 +524,7 @@
                                                 <label for="email_agree">이메일 수신여부</label>
                                             </th>
                                             <td>
-                                                <input type="checkbox" name="email_agree" />
+                                                <input type="checkbox" id="email_agree" name="email_agree" />
                                                 <span> 교육 안내 메일을 받겠습니다.</span>
                                             </td>
                                         </tr>
@@ -528,7 +533,7 @@
                                                 <label for="sns_agree">SNS 수신여부</label>
                                             </th>
                                             <td>
-                                                <input type="checkbox" name="sns_agree" />
+                                                <input type="checkbox" id="sns_agree" name="sns_agree" />
                                                 <span> SNS 수신설정</span>
                                             </td>
                                         </tr>
@@ -569,8 +574,6 @@
         <!-- Link JS -->
         <script
             src="js/jquery.MultiFile.min.js"
-            type="text/javascript"
-            language="javascript"
         ></script>
         <script src="js/main.js"></script>
     </body>
