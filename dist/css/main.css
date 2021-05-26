@@ -3782,7 +3782,6 @@ footer .fnb li {
   display: inline-block;
   position: relative;
   padding: 0 10px;
-  padding-left: -1px;
 }
 
 footer .fnb li:first-child {
@@ -5894,9 +5893,6 @@ footer a:hover {
 }
 
 .login section .box input:-internal-autofill-selected {
-  -webkit-appearance: menulist-button;
-     -moz-appearance: menulist-button;
-          appearance: menulist-button;
   background-color: #e8f0fe !important;
   background-image: none !important;
   color: -internal-light-dark(black, white) !important;
