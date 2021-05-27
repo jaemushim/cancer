@@ -2813,7 +2813,14 @@ section > .container {
   color: #333;
   font-weight: 500;
   padding-left: 10px;
+  appearance: none;
+  -moz-appearance: none;
+  -ms-progress-appearance: none;
   -webkit-appearance: none;
+}
+
+.bbs-search select::-ms-expand {
+  display: none;
 }
 
 @media only screen and (max-width: 768px) {
@@ -3485,6 +3492,10 @@ section > .container {
   margin-right: 10px;
 }
 
+.nav .search-input:focus {
+  outline: none;
+}
+
 .nav .search-input::-webkit-input-placeholder {
   color: #fff;
   font-size: 14px;
@@ -3610,7 +3621,6 @@ section > .container {
 .sub .sub-top-banner span {
   display: block;
   font-size: 16px;
-  margin-bottom: 10px;
 }
 
 .sub .sub-top-banner.board {
@@ -3658,7 +3668,7 @@ section > .container {
   position: relative;
 }
 
-.subpage-curr-wrap > .container .curr .dept-1 > li:not(:first-child) > a {
+.subpage-curr-wrap > .container .curr .dept-1 > li:not(:first-child) > button {
   display: inline-block;
   width: 190px;
   height: 50px;
@@ -4095,7 +4105,6 @@ footer a:hover {
   left: 0;
   bottom: 0;
   right: 0;
-  margin: auto;
   width: 40px;
   height: 40px;
   display: inline-block;
@@ -5424,16 +5433,26 @@ footer a:hover {
 }
 
 .edu-course_edu-schedule .select-wrap select {
-  border: none;
-  padding: 5px 10px;
-  border-bottom: 1px solid #111;
+  border: 1px solid #111;
+  border-bottom: 1px solid #111 !important;
   height: 40px;
+  padding-left: 4px;
+  display: inline-block;
+  min-width: 100px;
   margin-right: 15px;
+  margin: 26px 3px !important;
   color: #333;
   font-size: 16px;
   font-weight: bold;
   text-align: center;
   margin: 26px 0;
+}
+
+@media screen and (-webkit-min-device-pixel-ratio: 0) {
+  .edu-course_edu-schedule .select-wrap select {
+    border: none;
+    padding: 5px 10px;
+  }
 }
 
 @media only screen and (max-width: 768px) {

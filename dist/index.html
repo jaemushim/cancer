@@ -18,6 +18,7 @@
     <link rel="preload" href="images/common/close_white.png" as="image" />
     <link rel="preload" href="images/common/radio_style.png" as="image" />
     <!-- Link CSS -->
+    <link rel="stylesheet" href="css/slick.css" />
     <link rel="stylesheet" href="css/main.css" />
     <link rel="stylesheet" href="css/NotoSansKR.css" />
     <!-- Link Jquery -->
@@ -29,7 +30,7 @@
     <!-- 메인 -->
     <div id="wrapper" class="main">
       <div class="accessibility">
-        <a href="#main">본문내용 바로가기</a>
+        <a href="#start">본문내용 바로가기</a>
         <a href="#gnb">메인메뉴 바로가기</a>
       </div>
       <!-- 헤더 -->
@@ -65,7 +66,7 @@
                     </ul>
 
                     <button type="button" class="close-btn">
-                      <img src="images/common/close.png" alt="메뉴 닫기" />
+                      <img src="images/common/close.png" alt="전체메뉴 닫기" />
                     </button>
                   </li>
                   <li>
@@ -233,7 +234,7 @@
                 <li><a href="sign_step-1.html">회원가입</a></li>
                 <li class="search-bg">
                   <button type="button" class="search">
-                    <span class="hidden">검색</span>
+                    <span class="hidden">검색창 열기</span>
                   </button>
                 </li>
                 <li class="hamberger">
@@ -255,7 +256,7 @@
                       placeholder="검색어를 입력해주세요"
                       title="검색어 입력"
                     />
-                    <input type="submit" value="검색" />
+                    <input type="submit" value="검색" title="검색하기" />
                   </div>
                 </fieldset>
               </form>
@@ -264,7 +265,6 @@
         </div>
       </header>
       <main id="main">
-        <h1 class="hidden">메인 컨텐츠 시작</h1>
         <!-- 메인 비쥬얼 ( 섹션 1 ) -->
         <section class="visual section-1">
           <h2 class="sr-only">메인 배너</h2>
@@ -281,10 +281,7 @@
                 </p>
               </div>
               <div class="col-2">
-                <img
-                  src="images/main/header_visual.png"
-                  alt="국립암센터 전경"
-                />
+                <img src="images/main/header_visual.png" alt="" />
               </div>
             </div>
           </div>
@@ -292,7 +289,7 @@
         <!-- 섹션 2 -->
         <section class="section-2">
           <h2 class="title hidden">과정목록 퀵메뉴</h2>
-          <div class="container">
+          <div id="start" class="container">
             <ul class="row">
               <li class="item n1">
                 <a href="edu-course_course-list_1.html">
@@ -325,7 +322,6 @@
         <!-- 섹션 3 -->
         <section class="section-3">
           <div class="container">
-            <h2 class="title hidden">과정목록 퀵메뉴</h2>
             <div class="row">
               <article class="col-1">
                 <div class="box board">
@@ -333,66 +329,59 @@
                   <div class="max-height">
                     <ul>
                       <li>
-                        <a href=""
-                          >온라인교육 과정명이 들어가는 부분입니다.
-                          <span class="date">03.27 - 04.10</span>
-                        </a>
+                        <a href="">온라인교육 과정명이 들어가는 부분입니다. </a>
+                        <span class="date">03.27 - 04.10</span>
                       </li>
                       <li>
-                        <a href="">
-                          유방촬영의 정도관린와 임상영상(CR)
-                          <span class="date">03.27 - 04.10</span>
-                        </a>
+                        <a href=""> 유방촬영의 정도관린와 임상영상(CR) </a>
+                        <span class="date">03.27 - 04.10</span>
                       </li>
                       <li>
                         <a href="">
                           온라인교육 과정명이 들어가는 부분입니다.
-                          <span class="date">03.27 - 04.10</span>
                         </a>
+                        <span class="date">03.27 - 04.10</span>
                       </li>
                       <li>
                         <a href="">
                           온라인교육 과정명이 들어가는 부분입니다.
-                          <span class="date">03.27 - 04.10</span>
                         </a>
+                        <span class="date">03.27 - 04.10</span>
                       </li>
                       <li>
                         <a href="">
                           온라인교육 과정명이 들어가는 부분입니다.
-                          <span class="date">03.27 - 04.10</span>
                         </a>
+                        <span class="date">03.27 - 04.10</span>
                       </li>
                       <li>
                         <a href="">
                           온라인교육 과정명이 들어가는 부분입니다.
-                          <span class="date">03.27 - 04.10</span>
                         </a>
+                        <span class="date">03.27 - 04.10</span>
                       </li>
                       <li>
                         <a href="">
                           온라인교육 과정명이 들어가는 부분입니다.
-                          <span class="date">03.27 - 04.10</span>
                         </a>
+                        <span class="date">03.27 - 04.10</span>
                       </li>
                       <li>
                         <a href="">
                           온라인교육 과정명이 들어가는 부분입니다.
-                          <span class="date">03.27 - 04.10</span>
                         </a>
+                        <span class="date">03.27 - 04.10</span>
                       </li>
                       <li>
                         <a href="">
                           온라인교육 과정명이 들어가는 부분입니다.
-                          <span class="date">03.27 - 04.10</span>
                         </a>
+                        <span class="date">03.27 - 04.10</span>
                       </li>
                     </ul>
                   </div>
-                  <a
-                    href="bbs_notice.html"
-                    class="more-btn"
-                    aria-label="더보기 버튼"
-                    ><img src="images/common/plus.png" alt="더보기 버튼"
+                  <a href="bbs_notice.html" class="more-btn"
+                    ><img src="images/common/plus.png" alt="공지사항 더보기"
                   /></a>
                   <button type="button" class="open">펼치기</button>
                 </div>
@@ -405,63 +394,53 @@
                   <div class="max-height">
                     <ul>
                       <li>
-                        <a href=""
-                          >온라인교육 과정명이 들어가는 부분입니다.
-                          <span class="date">03.27 - 04.10</span>
-                        </a>
+                        <a href="">온라인교육 과정명이 들어가는 부분입니다. </a>
+                        <span class="date">03.27 - 04.10</span>
                       </li>
                       <li>
-                        <a href="">
-                          유방촬영의 정도관린와 임상영상(CR)
-                          <span class="date">03.27 - 04.10</span>
-                        </a>
+                        <a href=""> 유방촬영의 정도관린와 임상영상(CR) </a>
+                        <span class="date">03.27 - 04.10</span>
                       </li>
                       <li>
                         <a href="">
                           온라인교육 과정명이 들어가는 부분입니다.
-                          <span class="date">03.27 - 04.10</span>
                         </a>
+                        <span class="date">03.27 - 04.10</span>
                       </li>
                       <li>
                         <a href="">
                           온라인교육 과정명이 들어가는 부분입니다.
-                          <span class="date">03.27 - 04.10</span>
                         </a>
+                        <span class="date">03.27 - 04.10</span>
                       </li>
                       <li>
                         <a href="">
                           온라인교육 과정명이 들어가는 부분입니다.
-                          <span class="date">03.27 - 04.10</span>
                         </a>
+                        <span class="date">03.27 - 04.10</span>
                       </li>
                       <li>
                         <a href="">
                           온라인교육 과정명이 들어가는 부분입니다.
-                          <span class="date">03.27 - 04.10</span>
                         </a>
+                        <span class="date">03.27 - 04.10</span>
                       </li>
                       <li>
                         <a href="">
                           온라인교육 과정명이 들어가는 부분입니다.
-                          <span class="date">03.27 - 04.10</span>
                         </a>
+                        <span class="date">03.27 - 04.10</span>
                       </li>
                       <li>
                         <a href="">
                           온라인교육 과정명이 들어가는 부분입니다.
-                          <span class="date">03.27 - 04.10</span>
                         </a>
-                      </li>
-                      <li>
-                        <a href="">
-                          온라인교육 과정명이 들어가는 부분입니다.
-                          <span class="date">03.27 - 04.10</span>
-                        </a>
+                        <span class="date">03.27 - 04.10</span>
                       </li>
                     </ul>
                   </div>
                   <a href="edu-course_course-regist_2.html" class="more-btn"
-                    ><img src="images/common/plus.png" alt="더보기 버튼"
+                    ><img src="images/common/plus.png" alt="온라인교육 더보기"
                   /></a>
                   <div class="else">
                     <h2>
@@ -559,7 +538,7 @@
                 <a href="">이메일주소 무단수집거부</a>
               </li>
               <li>
-                <a href="">사이트맵</a>
+                <a href="sitemap.html">사이트맵</a>
               </li>
             </ul>
           </div>
@@ -568,10 +547,7 @@
           <div class="row">
             <div class="col-1">
               <div class="logo">
-                <img
-                  src="images/common/footer_logo.png"
-                  alt="국립암센터 로고"
-                />
+                <img src="images/common/footer_logo.png" alt="국립암센터" />
               </div>
             </div>
             <div class="col-2">

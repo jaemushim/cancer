@@ -17,7 +17,12 @@ section
         color: #333
         font-weight: 500
         padding-left: 10px
+        appearance: none
+        -moz-appearance: none
+        -ms-progress-appearance: none
         -webkit-appearance: none
+        &::-ms-expand
+            display: none
         @include for_breakpoint(mobile )
             width: 100%
             margin-bottom: 5px

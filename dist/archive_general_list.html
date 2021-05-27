@@ -25,7 +25,7 @@
   <body>
     <div id="wrapper" class="sub archive_general_list">
       <div class="accessibility">
-        <a href="#main">본문내용 바로가기</a>
+        <a href="#start">본문내용 바로가기</a>
         <a href="#gnb">메인메뉴 바로가기</a>
       </div>
       <!-- 헤더 -->
@@ -262,10 +262,10 @@
       <!-- 탑 배너 -->
       <div class="sub-top-banner">
         <div class="title-box">
-          <h2 class="title">
+          <p class="title">
             <span>국가암검진 질 향상 교육</span>
             게시판
-          </h2>
+          </p>
         </div>
         <!-- 서브페이지 현재메뉴 -->
         <div class="subpage-curr-wrap">
@@ -273,10 +273,12 @@
             <div class="curr">
               <ul class="dept-1">
                 <li>
-                  <a href="index.html" class="home"></a>
+                  <a href="index.html" class="home">
+                    <span class="sr-only">홈으로 가기</span>
+                  </a>
                 </li>
                 <li>
-                  <a href="">자료실</a>
+                  <button>자료실</button>
                   <ul class="dept-2">
                     <li><a href="edu-intro_edu-guide.html">교육소개</a></li>
                     <li><a href="edu-course_edu-schedule.html">교육과정</a></li>
@@ -288,7 +290,7 @@
                   </ul>
                 </li>
                 <li>
-                  <a href="">일반자료실</a>
+                  <button>일반자료실</button>
                   <ul class="dept-2">
                     <li><a href="archive_general_list.html">일반자료실</a></li>
                     <li>
@@ -315,7 +317,7 @@
       <!-- 메인 -->
       <main id="main">
         <section class="section-1">
-          <div class="container">
+          <div class="container" id="start">
             <h2>자료실</h2>
             <div class="bbs-search">
               <form action="$">

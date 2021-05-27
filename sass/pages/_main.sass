@@ -139,7 +139,6 @@
                     left: 0
                     bottom: 0
                     right: 0
-                    margin: auto
                     width: 40px
                     height: 40px
                     display: inline-block
@@ -197,6 +196,7 @@
                     display: block
                     margin-left: 0.5rem
                     line-height: 1
+                    padding-bottom: 8px
                     @include for_breakpoint(mobile tablet)
                         font-size: 16px
                         margin-top: 12px
@@ -205,6 +205,18 @@
                         text-align: center
                     @include for_breakpoint(tablet)
                         padding-top: 85px
+
+                &:nth-child(1):hover span
+                    border-bottom: 4px solid #ffc20e
+                &:nth-child(2):hover span
+                    border-bottom: 4px solid #1ab26b
+                &:nth-child(3):hover span
+                    border-bottom: 4px solid #f26065
+                &:nth-child(4):hover span
+                    border-bottom: 4px solid #0072bc
+                &:nth-child(5):hover span
+                    border-bottom: 4px solid #e2761e
+
                 &:nth-child(1):hover .point
                     color: #ffc20e
 
@@ -216,6 +228,8 @@
 
                 &:nth-child(4):hover .point
                     color: #0072bc
+                &:nth-child(5):hover .point
+                    color: #e2761e
 
     // 섹션 3
     .section-3

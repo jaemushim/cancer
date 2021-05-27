@@ -25,7 +25,7 @@
   <body>
     <div id="wrapper" class="sub login_entry login">
       <div class="accessibility">
-        <a href="#main">본문내용 바로가기</a>
+        <a href="#start">본문내용 바로가기</a>
         <a href="#gnb">메인메뉴 바로가기</a>
       </div>
       <!-- 헤더 -->
@@ -262,10 +262,10 @@
       <!-- 탑 배너 -->
       <div class="sub-top-banner">
         <div class="title-box">
-          <h2 class="title">
+          <p class="title">
             <span>국가암검진 질 향상 교육</span>
             로그인
-          </h2>
+          </p>
         </div>
         <!-- 서브페이지 현재메뉴 -->
         <div class="subpage-curr-wrap">
@@ -273,10 +273,12 @@
             <div class="curr">
               <ul class="dept-1 single">
                 <li>
-                  <a href="index.html" class="home"></a>
+                  <a href="index.html" class="home">
+                    <span class="sr-only">홈으로 가기</span>
+                  </a>
                 </li>
                 <li>
-                  <a href="">로그인</a>
+                  <button>로그인</button>
                 </li>
               </ul>
             </div>
@@ -286,7 +288,7 @@
       <!-- 메인 -->
       <main id="main">
         <section class="section-1">
-          <div class="container">
+          <div class="container" id="start">
             <div class="box">
               <h2>&#8251; 안내사항</h2>
               <p>

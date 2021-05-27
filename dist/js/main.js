@@ -31,23 +31,30 @@ $(function () {
       const getOrder = $(this).find("img").data("order");
       $(this)
         .find("img")
-        .attr("src", `images/main/quick2_icon_on_${getOrder}.png`);
+        .attr("src", "images/main/quick2_icon_on_" + getOrder + ".png");
       $(this).find(".title").css("color", "rgb(8, 88, 186)");
     },
     function () {
       const getOrder = $(this).find("img").data("order");
       $(this)
         .find("img")
-        .attr("src", `images/main/quick2_icon_${getOrder}.png`);
+        .attr("src", "images/main/quick2_icon_" + getOrder + ".png");
       $(this).find(".title").css("color", "#000");
     }
   );
 
   // 메인 검색
-  $(".nav .search").click(function () {
+  $(".nav .search").on("click", function () {
+    var $search = $(".search span");
+
     $(".nav .search-open").toggleClass("open");
     $(this).toggleClass("active");
     $(".nav .search-bg").toggleClass("active");
+    if ($(".search").hasClass("active")) {
+      $search.text("검색창 닫기");
+    } else {
+      $search.text("검색창 열기");
+    }
   });
 
   // 서브메뉴 현재위치 클릭시
@@ -57,15 +64,23 @@ $(function () {
 
   // 자주하는 질문 탭
   $(".tab-content").css("display", "none");
-  $(".tab-link").click(function () {
+  $(".tab-link").on("click", function () {
     var order = $(this).data("order");
     $(".tab-content").css("display", "none");
-    $(`.tab-content:not([data-order='${order}'])`).removeClass("active");
-    $(".tab-content").filter(`[data-order=${order}]`).toggleClass("active");
-    $(`.tab-link:not([data-order='${order}'])`).removeClass("active");
+    $(".tab-content:not([data-order='" + order + "'])").removeClass("active");
+    $(".tab-content")
+      .filter("[data-order=" + order + "]")
+      .toggleClass("active");
+    $(".tab-link:not([data-order='" + order + "'])").removeClass("active");
     $(this).toggleClass("active");
-  });
 
+    var contHeight = $(this).next().height();
+    if ($(".tab-content").hasClass("active")) {
+      $(".max-height").css("max-height", 555 + contHeight + "px");
+    } else {
+      $(".max-height").css("max-height", "554px");
+    }
+  });
   // 회원가입 체크박스 중복방지
   $(".sign-input").click(function (e) {
     var obj = document.getElementsByName(e.target.name);
@@ -219,8 +234,8 @@ $(function () {
   });
 
   // 서브페이지 현재 메뉴
-  $(".curr .dept-1 a")
-    .not($(".dept-2 > li > a,.home"))
+  $(".curr .dept-1 button")
+    .not($(".dept-2 > li > button,.home"))
     .on("click", function (e) {
       e.preventDefault();
       $(".curr .dept-1>li").not($(this).parent()).removeClass("active");
