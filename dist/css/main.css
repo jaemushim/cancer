@@ -6404,40 +6404,46 @@ footer a:hover {
   -moz-appearance: none;
   appearance: none;
   position: relative;
+  background: url(../images/common/down_arrow_2.png) right 15px center no-repeat;
   color: #666;
 }
 
-.sign_step-3 table .email td .select-email, .sign_step-3 table .email td .select-job, .sign_step-3 table .email td .select-career, .sign_step-3 table .job td .select-email, .sign_step-3 table .job td .select-job, .sign_step-3 table .job td .select-career, .sign_step-3 table .career td .select-email, .sign_step-3 table .career td .select-job, .sign_step-3 table .career td .select-career {
+.sign_step-3 table .email td select::-ms-expand, .sign_step-3 table .job td select::-ms-expand, .sign_step-3 table .career td select::-ms-expand {
+  display: none;
+}
+
+.sign_step-3 table .email .select-email, .sign_step-3 table .email .select-job, .sign_step-3 table .email .select-career, .sign_step-3 table .job .select-email, .sign_step-3 table .job .select-job, .sign_step-3 table .job .select-career, .sign_step-3 table .career .select-email, .sign_step-3 table .career .select-job, .sign_step-3 table .career .select-career {
   position: relative;
   display: inline-block;
   margin: 0;
 }
 
 @media only screen and (max-width: 768px) {
-  .sign_step-3 table .email td .select-email, .sign_step-3 table .email td .select-job, .sign_step-3 table .email td .select-career, .sign_step-3 table .job td .select-email, .sign_step-3 table .job td .select-job, .sign_step-3 table .job td .select-career, .sign_step-3 table .career td .select-email, .sign_step-3 table .career td .select-job, .sign_step-3 table .career td .select-career {
+  .sign_step-3 table .email .select-email, .sign_step-3 table .email .select-job, .sign_step-3 table .email .select-career, .sign_step-3 table .job .select-email, .sign_step-3 table .job .select-job, .sign_step-3 table .job .select-career, .sign_step-3 table .career .select-email, .sign_step-3 table .career .select-job, .sign_step-3 table .career .select-career {
     width: 100%;
+  }
+  .sign_step-3 table .email .select-email select, .sign_step-3 table .email .select-job select, .sign_step-3 table .email .select-career select, .sign_step-3 table .job .select-email select, .sign_step-3 table .job .select-job select, .sign_step-3 table .job .select-career select, .sign_step-3 table .career .select-email select, .sign_step-3 table .career .select-job select, .sign_step-3 table .career .select-career select {
+    margin: 0;
   }
 }
 
-.sign_step-3 table .email td .select-email select, .sign_step-3 table .email td .select-job select, .sign_step-3 table .email td .select-career select, .sign_step-3 table .job td .select-email select, .sign_step-3 table .job td .select-job select, .sign_step-3 table .job td .select-career select, .sign_step-3 table .career td .select-email select, .sign_step-3 table .career td .select-job select, .sign_step-3 table .career td .select-career select {
-  margin: 0;
+@media only screen and (max-width: 768px) and (max-width: 768px) {
+  .sign_step-3 table .email .select-email select, .sign_step-3 table .email .select-job select, .sign_step-3 table .email .select-career select, .sign_step-3 table .job .select-email select, .sign_step-3 table .job .select-job select, .sign_step-3 table .job .select-career select, .sign_step-3 table .career .select-email select, .sign_step-3 table .career .select-job select, .sign_step-3 table .career .select-career select {
+    width: 100%;
+  }
 }
 
 @media only screen and (max-width: 768px) {
-  .sign_step-3 table .email td .select-email select, .sign_step-3 table .email td .select-job select, .sign_step-3 table .email td .select-career select, .sign_step-3 table .job td .select-email select, .sign_step-3 table .job td .select-job select, .sign_step-3 table .job td .select-career select, .sign_step-3 table .career td .select-email select, .sign_step-3 table .career td .select-job select, .sign_step-3 table .career td .select-career select {
-    width: 100%;
+  .sign_step-3 table .email .select-email:after, .sign_step-3 table .email .select-job:after, .sign_step-3 table .email .select-career:after, .sign_step-3 table .job .select-email:after, .sign_step-3 table .job .select-job:after, .sign_step-3 table .job .select-career:after, .sign_step-3 table .career .select-email:after, .sign_step-3 table .career .select-job:after, .sign_step-3 table .career .select-career:after {
+    content: '';
+    position: absolute;
+    background: url(../images/common/down_arrow_2.png) no-repeat;
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    top: 40%;
+    right: 15px;
   }
-}
-
-.sign_step-3 table .email td .select-email:after, .sign_step-3 table .email td .select-job:after, .sign_step-3 table .email td .select-career:after, .sign_step-3 table .job td .select-email:after, .sign_step-3 table .job td .select-job:after, .sign_step-3 table .job td .select-career:after, .sign_step-3 table .career td .select-email:after, .sign_step-3 table .career td .select-job:after, .sign_step-3 table .career td .select-career:after {
-  content: '';
-  position: absolute;
-  background: url(../images/common/down_arrow_2.png) no-repeat;
-  display: inline-block;
-  width: 15px;
-  height: 15px;
-  top: 40%;
-  right: 15px;
 }
 
 .sign_step-3 table .job span.block {

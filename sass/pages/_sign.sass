@@ -246,13 +246,16 @@
                     -moz-appearance: none
                     appearance: none
                     position: relative
+                    background: url(../images/common/down_arrow_2.png) right 15px center no-repeat
                     color: #666
-                .select-email, .select-job,.select-career
-                    position: relative
-                    display: inline-block
-                    margin: 0
-                    @include for_breakpoint(mobile)
-                        width: 100%
+                    &::-ms-expand
+                        display: none
+            .select-email, .select-job,.select-career
+                position: relative
+                display: inline-block
+                margin: 0
+                @include for_breakpoint(mobile)
+                    width: 100%
                     select
                         margin: 0
                         @include for_breakpoint(mobile)
